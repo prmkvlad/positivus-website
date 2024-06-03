@@ -1,0 +1,45 @@
+.mobile-overlay {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 15px 20px;
+	border: none;
+
+	&:modal {
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	&__close-button-wrapper {
+		display: flex;
+		justify-content: end;
+	}
+
+	&__close-button {}
+
+	&__body {}
+
+	&__list {
+		@include flex-center;
+
+		flex-direction: column;
+		min-height: 80vh;
+		font-size: 32px;
+	}
+
+	&__item {
+		width: 100%;
+	}
+
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 64px;
+		width: 100%;
+
+		@include hover {
+			background-color: var(--color-gray);
+		}
+	}
+}
