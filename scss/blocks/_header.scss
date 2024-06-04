@@ -53,6 +53,10 @@
 		@include desktop {
 			column-gap: 20px;
 		}
+
+		@include tablet {
+			column-gap: 16px;
+		}
 	}
 
 	&__menu-item {}
@@ -99,8 +103,5 @@
 
 .logo {
 
-	&__img {
-		max-width: 100%;
-		height: auto;
-	}
+	&__img {}
 }
