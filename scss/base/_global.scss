@@ -16,6 +16,11 @@ svg * {
 	transition-duration: var(--transition-duration);
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 h1,
 h2,
 h3,
