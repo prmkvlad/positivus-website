@@ -20,4 +20,14 @@
 			--gridColumns: 1;
 		}
 	}
+
+	&--3 {
+		@include desktop {
+			--gridColumns: 2;
+		}
+
+		@include mobile {
+			--gridColumns: 1;
+		}
+	}
 }
