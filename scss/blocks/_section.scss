@@ -25,7 +25,9 @@
 		}
 	}
 
-	&__title {}
+	&__title {
+		white-space: nowrap;
+	}
 
 	&__description {
 		max-width: 580px;
