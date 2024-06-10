@@ -1,0 +1,90 @@
+.reviews {
+	padding-top: 84px;
+	padding-bottom: 54px;
+	color: var(--color-light);
+	background-color: var(--color-dark);
+	border-radius: var(--border-radius-large);
+
+	@include tablet {
+		padding-left: 50px;
+	}
+
+	@include mobile {
+		padding: 50px;
+	}
+
+	@include mobile-s {
+		padding: 30px;
+	}
+
+	&__slider {
+		--reviewsSliderSlideWidth: 606px;
+
+		display: flex;
+		flex-direction: column;
+		row-gap: clamp(3.125rem, 1.804rem + 6.607vw, 7.75rem);
+	}
+
+	&__slider-list {
+
+		@include tablet-above {
+			margin-left: calc(var(--reviewsSliderSlideWidth) / 2 * -1);
+		}
+	}
+
+	&__slider-item {
+		min-width: var(--reviewsSliderSlideWidth);
+
+		@include mobile {
+			--reviewsSliderSlideWidth: auto;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 564px;
+		margin-inline: auto;
+	}
+
+	&__arrow-button {
+		@include reset-button;
+		@include flex-center;
+		@include square(48px);
+
+		position: relative;
+		color: var(--color-light);
+		margin-top: auto;
+		z-index: 11;
+
+		@include hover {
+			color: var(--color-accent);
+		}
+
+		&::after {
+			content: '';
+		}
+
+		svg {
+			@include square(20px);
+		}
+	}
+
+	&__pagination {
+
+		.swiper-pagination-bullet {
+			clip-path: polygon(50% 20%, 100% 0, 80% 50%, 100% 100%, 50% 80%, 0 100%, 20% 50%, 0 0);
+			position: relative;
+			bottom: 0;
+			opacity: 1;
+			background: var(--color-light);
+			border-radius: 0;
+
+			&-active {
+				background: var(--color-accent);
+			}
+		}
+	}
+}
