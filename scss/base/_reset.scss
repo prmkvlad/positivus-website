@@ -53,3 +53,9 @@ svg *[fill] {
 svg *[stroke] {
 	stroke: currentColor
 }
+
+fieldset {
+	margin-left: 0;
+	padding: 0;
+	border: none;
+}

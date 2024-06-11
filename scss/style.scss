@@ -9,6 +9,9 @@
 
 // blocks
 
+@import 'blocks/field';
+@import 'blocks/radio';
+@import 'blocks/radios';
 @import 'blocks/button';
 @import 'blocks/grid';
 @import 'blocks/burger-button';
@@ -27,3 +30,4 @@
 @import 'blocks/team-card';
 @import 'blocks/reviews';
 @import 'blocks/review-card';
+@import 'blocks/contact-us';
