@@ -5,6 +5,11 @@
 	padding: 15px 20px;
 	border: none;
 
+	display: block;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s;
+
 	&:modal {
 		max-height: 100%;
 		max-width: 100%;
@@ -42,4 +47,9 @@
 			background-color: var(--color-gray);
 		}
 	}
+}
+
+.mobile-overlay[open] {
+	opacity: 1;
+	visibility: visible;
 }

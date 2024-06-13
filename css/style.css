@@ -621,6 +621,10 @@ img {
   margin: 0;
   padding: 15px 20px;
   border: none;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
 }
 .mobile-overlay:modal {
   max-height: 100%;
@@ -657,6 +661,11 @@ img {
   .mobile-overlay__link:active {
     background-color: var(--color-gray);
   }
+}
+
+.mobile-overlay[open] {
+  opacity: 1;
+  visibility: visible;
 }
 
 .section {
