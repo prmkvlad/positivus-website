@@ -1491,7 +1491,7 @@ img {
   translate: -50% -50%;
   height: calc(100% - var(--contactUsImageOffsetY) * 2);
   aspect-ratio: 1;
-  background: url("../../img/contact-us-bg.svg") center/contain no-repeat;
+  background: url("../img/contact-us-bg.svg") center/contain no-repeat;
 }
 @media (max-width: 1023px) {
   .contact-us:after {
