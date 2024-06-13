@@ -28,19 +28,23 @@ h4 {
 	font-weight: 500;
 }
 
-h1 {
+h1,
+.h1 {
 	@include fluid-text(60, 43);
 }
 
-h2 {
+h2,
+.h2 {
 	@include fluid-text(40, 36);
 }
 
-h3 {
+h3,
+.h3 {
 	@include fluid-text(30, 26);
 }
 
-h4 {
+h4,
+.h4 {
 	@include fluid-text(20, 18);
 }
 

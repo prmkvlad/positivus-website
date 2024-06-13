@@ -1,8 +1,29 @@
 .field {
+	--fieldInputHeight: var(--input-height);
+	--fieldInputTextColor: var(--color-dark);
+	--fieldInputBgColor: var(--color-light);
+	--fieldInputBorderColor: var(--color-dark);
+	--fieldInputPlaceholderColor: var(--color-gray-alt);
+	--fieldInputHoverBgColor: var(--color-light);
+	--fieldInputHoverOpacity: 0.7;
+
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	row-gap: 5px;
+
+	&--big-height {
+		--fieldInputHeight: var(--button-height);
+	}
+
+	&--dark-bg {
+		--fieldInputTextColor: var(--color-accent);
+		--fieldInputBgColor: var(--color-dark-alt);
+		--fieldInputBorderColor: var(--color-light);
+		--fieldInputPlaceholderColor: var(--color-light);
+		--fieldInputHoverBgColor: var(--color-dark);
+		--fieldInputHoverOpacity: 1;
+	}
 
 	@include mobile {
 		row-gap: 10px;
@@ -14,14 +35,17 @@
 
 	&__input {
 		width: 100%;
-		height: var(--input-height);
+		height: var(--fieldInputHeight);
 		padding-inline: 30px;
-		border: var(--border);
+		color: var(--fieldInputTextColor);
+		background-color: var(--fieldInputBgColor);
+		border: 1px solid var(--fieldInputBorderColor);
 		border-radius: var(--border-radius);
 		transition-duration: var(--transition-duration);
 
 		@include hover {
-			opacity: 0.7;
+			opacity: var(--fieldInputHoverOpacity);
+			background-color: var(--fieldInputHoverBgColor);
 		}
 
 		@include mobile {
@@ -38,7 +62,7 @@
 		}
 
 		&::placeholder {
-			color: var(--color-gray-alt);
+			color: var(--fieldInputPlaceholderColor);
 		}
 
 		&--textarea {
