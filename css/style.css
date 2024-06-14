@@ -115,6 +115,7 @@ fieldset {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
+  width: 100%;
 }
 
 .visually-hidden {
@@ -145,11 +146,27 @@ fieldset {
 
 body {
   font-size: clamp(16px, 1.25vw, 18px);
+  height: 100%;
   font-family: var(--font-family-base);
   font-weight: 400;
   line-height: 1.28;
   color: var(--color-dark);
   background-color: var(--color-light);
+}
+
+html {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
 }
 
 a,
@@ -670,6 +687,9 @@ img {
 
 .section {
   padding-block: var(--section-padding-y);
+}
+.section:last-of-type {
+  padding-bottom: 90px;
 }
 .section--hidden-x {
   overflow-x: hidden;

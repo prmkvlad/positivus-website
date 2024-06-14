@@ -1,6 +1,10 @@
 .section {
 	padding-block: var(--section-padding-y);
 
+	&:last-of-type {
+		padding-bottom: 90px;
+	}
+
 	&--hidden-x {
 		overflow-x: hidden;
 	}
