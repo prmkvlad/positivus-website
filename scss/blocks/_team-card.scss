@@ -59,6 +59,10 @@
 		color: var(--color-accent);
 		background-color: var(--color-dark);
 		border-radius: 50%;
+
+		@include hover {
+			opacity: 0.8;
+		}
 	}
 
 	&__body {

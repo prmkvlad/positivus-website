@@ -5,6 +5,7 @@
 	position: relative;
 	border-radius: var(--border-radius-small);
 	cursor: pointer;
+	color: var(--color-dark);
 
 	@include hover {
 		background-color: var(--color-accent);

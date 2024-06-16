@@ -473,6 +473,7 @@ img {
   position: relative;
   border-radius: var(--border-radius-small);
   cursor: pointer;
+  color: var(--color-dark);
 }
 @media (hover: hover) {
   .burger-button:hover {
@@ -1351,6 +1352,16 @@ img {
   color: var(--color-accent);
   background-color: var(--color-dark);
   border-radius: 50%;
+}
+@media (hover: hover) {
+  .team-card__link:hover {
+    opacity: 0.8;
+  }
+}
+@media (hover: none) {
+  .team-card__link:active {
+    opacity: 0.8;
+  }
 }
 .team-card__body {
   --teamCardBodyMarginTop: 28px;
